@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+
+  <h1>👤 회원가입</h1>
+  <p>SKALA-FRONT 회원가입을 환영합니다.</p>
+
+  <form action="signUpResult.html" method="get">
+
+    <fieldset>
+      <legend>계정 정보</legend>
+
+      <label>아이디:
+        <input type="text" name="userId" placeholder="4-15자 영문/숫자" required>
+      </label>
+      (필수)<br><br>
+
+      <label>비밀번호:
+        <input type="password" name="userPw" placeholder="8자 이상 입력" required>
+      </label>
+      (필수)<br><br>
+
+      <label>이메일:
+        <input type="text" name="emailId" placeholder="example" required>
+        @
+        <select name="emailDomain">
+          <option value="naver.com">naver.com</option>
+          <option value="gmail.com">gmail.com</option>
+          <option value="daum.net">daum.net</option>
+          <option value="직접입력">직접입력</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>개인 프로필 정보</legend>
+
+      <label>이름:
+        <input type="text" name="userName" required>
+      </label><br><br>
+
+      <label>생년월일:
+        <input type="date" name="birthDay">
+      </label><br><br>
+
+      <label>성별:
+        <input type="radio" name="gender" value="male"> 남성
+        <input type="radio" name="gender" value="female"> 여성
+        <input type="radio" name="gender" value="secret"> 선택안함
+      </label><br><br>
+
+      <label>관심 분야 (중복 선택 가능):</label><br>
+      <input type="checkbox" name="interest" value="web"> 웹 프론트엔드 (Vue.js/HTML)<br>
+      <input type="checkbox" name="interest" value="uiux"> UI/UX 디자인 원론<br>
+      <input type="checkbox" name="interest" value="db"> 백엔드 & 데이터베이스<br>
+      <input type="checkbox" name="interest" value="cloud"> 클라우드 & 데이터과학<br><br>
+
+      <label>가입 경로:
+        <select name="joinPath">
+          <option value="none">-- 선택해 주세요 --</option>
+          <option value="friend">지인 소개</option>
+          <option value="search">검색 엔진</option>
+          <option value="sns">SNS 광고</option>
+          <option value="etc">기타</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>자기소개</legend>
+      <label>나를 표현하는 한 줄 소개로 가입 인사:</label><br>
+      <textarea name="introduce" rows="4" cols="50" placeholder="자기소개를 입력해주세요 (최대 200자)"></textarea>
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="동의하고 회원가입">
+    <input type="reset" value="다시 작성">
+
+  </form>
+<div>
+</body>
+</html>

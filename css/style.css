@@ -1,0 +1,461 @@
+/* 구글 폰트 (Noto Sans KR) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+/* 전체 폰트, 줄간격, 색상, 배경 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.8;
+  color: #333333;
+  background-color: #eef2f7;
+  padding: 20px;
+}
+
+/* 제목 강조 */
+h1 {
+  color: #ffffff;
+  background-color: #4a6fa5;
+  font-size: 28px;
+  padding: 12px 20px;
+  border-left: 8px solid #2c3e50;
+  border-radius: 6px;
+}
+
+h2 {
+  color: #2c3e50;
+  font-size: 20px;
+  padding: 8px 14px;
+  border-bottom: 3px solid #4a6fa5;
+  display: inline-block;
+}
+
+/* 링크 스타일 */
+a {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #d35400;
+}
+
+
+/* 미션2: 리뷰 카드 스타일 */
+.trip-card {
+  background-color: #fff8f0;
+  border: 2px solid #e67e22;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+/* 미션2: 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #4a6fa5;
+  color: #ffffff;
+}
+
+td {
+  background-color: #ffffff;
+}
+
+/* 미션3: 회원가입 폼 스타일링 */
+fieldset {
+  border: 2px solid #4a6fa5;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fafcff;
+}
+
+legend {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4a6fa5;
+  padding: 5px 12px;
+  border-radius: 6px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* 입력창 크기 키우기 */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* 버튼 꾸미기 */
+input[type="submit"] {
+  background-color: #27ae60;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1e8449;
+}
+
+input[type="reset"] {
+  background-color: #ffffff;
+  color: #888888;
+  border: 1px solid #cccccc;
+  padding: 12px 24px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="reset"]:hover {
+  background-color: #f2f2f2;
+}
+
+/* 미션4: 바로가기 메뉴 Flexbox */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  background-color: #f0f4fa;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+/* 미션4: main과 aside 가로 배치 */
+.content-wrap {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+main {
+  flex: 2;   /* main이 더 넓게 */
+}
+
+aside {
+  flex: 1;
+  background-color: #f7f9fc;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* 미션4: 여행 카드 Grid (3열 바둑판) */
+.trip-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.trip-gallery .trip-card {
+  margin: 0;   /* grid gap으로 간격 주므로 margin 제거 */
+}
+
+.trip-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 미션5: 반응형 웹 디자인 (786px 이하) */
+@media (max-width: 786px) {
+
+  /* index.html: main/aside 세로 1열로 변경 */
+  .content-wrap {
+    flex-direction: column;
+  }
+
+  /* index.html: 바로가기 메뉴도 1열로 정렬 */
+  nav ul {
+    flex-direction: column;
+  }
+
+  /* myTrip.html: 3열 -> 1열 */
+  .trip-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* 좁은 화면에서 여백 줄이기 */
+  body {
+    padding: 10px;
+  }
+
+  
+}
+
+/* 미션 6: 비디오 영역 정리 */
+.video-section {
+  max-width: 500px;
+  margin: 30px auto;   /* 가운데 정렬 */
+  text-align: center;
+}
+
+.video-section video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.video-section p {
+  margin-top: 10px;
+}
+
+/* 미션7: 오디오 플레이어 정리 */
+h2 {
+  display: block;   /* 기존에 inline-block이었다면 audio가 옆에 붙어버림 */
+}
+
+audio {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 15px 0 25px 0;
+}
+
+/* 미션: 여행 앨범 애니메이션 */
+
+/* 카드 등장 애니메이션 (페이지 로드 시 아래에서 위로 스르륵) */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trip-gallery .trip-card {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* 카드마다 살짝씩 시간차를 두고 나타나게 */
+.trip-gallery .trip-card:nth-child(1) { animation-delay: 0.1s; }
+.trip-gallery .trip-card:nth-child(2) { animation-delay: 0.3s; }
+.trip-gallery .trip-card:nth-child(3) { animation-delay: 0.5s; }
+
+/* 마우스 올렸을 때 카드가 살짝 떠오르는 효과 */
+.trip-gallery .trip-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-gallery .trip-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* 사진도 살짝 확대되는 효과 */
+.trip-gallery img {
+  transition: transform 0.4s ease;
+  overflow: hidden;
+}
+
+.trip-gallery .trip-card:hover img {
+  transform: scale(1.05);
+}
+
+.trip-card {
+  /* 기존 스타일... */
+  overflow: hidden;
+}
+
+/* 업다운 게임 버튼 */
+aside section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed #cccccc;
+}
+
+aside button {
+  background-color: #4a6fa5;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+aside button:hover {
+  background-color: #35547d;
+}
+
+/* 실시간 날씨 박스 */
+#weather-box {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #f0f4fa;
+  border-radius: 8px;
+  border: 1px solid #cfd9e8;
+}
+
+#weather-box h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+#weather-box p {
+  margin: 6px 0;
+}
+
+#weather-box h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+
+/* main 안 콘텐츠를 좌(텍스트) / 우(이미지) 2단으로 */
+main .news-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+main .news-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* aside 안 위젯들을 카드형 2열 그리드로 */
+aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-content: start;
+}
+
+aside h2 {
+  grid-column: 1 / -1;   /* "실시간 정보" 제목은 위쪽 전체 폭 사용 */
+}
+
+aside section {
+  background-color: #ffffff;
+  border: 1px solid #e0e6ef;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* 실시간 날씨 조회 & 실시간 정보 섹션은 폭 넓게 */
+aside section:has(#citySelect),
+aside section:last-child {
+  grid-column: 1 / -1;
+}
+
+
+/* 786px 이하에서는 다시 1열로 */
+@media (max-width: 786px) {
+  aside {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* 786px 이하 반응형 */
+@media (max-width: 786px) {
+  .content-wrap {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .trip-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+main .news-grid img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.container {
+  overflow-x: hidden;
+}
+
+main {
+  min-width: 0;
+}
+
+aside {
+  min-width: 0;
+}
