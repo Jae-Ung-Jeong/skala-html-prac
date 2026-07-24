@@ -1,6 +1,6 @@
 # 🚀 정재웅의 유니버스 — SKALA HTML/CSS/JS 실습
 
-SKALA 프론트엔드 과정에서 진행한 HTML, CSS, JavaScript 실습 프로젝트입니다.
+SKALA 프론트엔드 과정에서 진행한 HTML, CSS, JavaScript 실습 프로젝트입니다.<br>
 개인 프로필, 학습 자료, 여행 기록을 모아볼 수 있는 개인 포털 Hub 페이지로 구성되어 있습니다.
 
 ## 🔗 미리보기
@@ -31,8 +31,8 @@ SKALA-HTML-PRAC/
    │  └─ realtimeInfo.js    # 날씨 화면 표시 모듈 (import, DOM 조작)
    │
    └─ media/
-      ├─ *.jpg / *.png       # 여행 사진
-      └─ *.mp3 / *.mp4       # 배경음악, 브이로그 영상
+      ├─ *.jpg / *.png      # 여행 사진
+      └─ *.mp3 / *.mp4      # 배경음악, 브이로그 영상
 ```
 
 ## ✨ 주요 기능
